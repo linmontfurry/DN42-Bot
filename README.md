@@ -29,6 +29,7 @@
 
 ## 配置说明
 
+### 主端
 需要创建 `config.yaml` 配置，包括服务器后端、隐藏控制、flap 监控后端等信息，可前往本项目的 `config.yaml.example` 查看相关信息
 
 需要安装下列nodejs依赖才可运行本bot
@@ -39,11 +40,35 @@ Bot 端单独运行依赖
 npm install node-fetch-cjs js-yaml node-telegram-bot-api chalk
 ```
 
+运行 Bot
+
+```
+node index.js
+```
+
+### 后端
 后端 Commands 单独运行依赖
 
 ```
 npm install whois crypto
 ```
+
+Bot 的部署阶段必须要与 `commands.js` 一起部署（默认后端参数调用离不开）
+
+但是在其他机器上可单独部署 `commands.js` 作为后端使用
+
+默认情况下直接运行 `commands.js` 没有密码，端口将会自动监听`0.0.0.0:65534`端口
+
+`commands.js` 可用参数args有
+
+```
+--keys <str> 密码
+--port <portnum> 端口
+```
+
+通过 `node commands.js --keys <str> --port <portnum>` 可直接启动后端
+
+后端http页面可进行反代操作来避免当地网络拦截，因此若要直接安装部署的后端，请辨别config.yaml是否需要在末尾url处加入`/api/run`方便调用
 
 ## 鸣谢
 
