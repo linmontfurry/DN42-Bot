@@ -1,0 +1,20 @@
+{
+  "name": "dn42-test-ip-bot",
+  "version": "1.0.6",
+  "description": "Yet another simple and practical Telegram BGP test bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "LinmontFurry",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commands": "^0.0.7",
+    "express": "^5.1.0",
+    "js-yaml": "^4.1.0",
+    "node-fetch-cjs": "^3.3.2",
+    "node-telegram-bot-api": "^0.63.0",
+    "whois": "^2.15.0"
+  }
+}
