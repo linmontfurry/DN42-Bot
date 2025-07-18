@@ -74,7 +74,7 @@ Bot 的部署阶段必须要与 `commands.js` 一起部署（默认后端参数�
 
 本项目部分功能使用/参考并基于以下开源项目开发修改：
 
-- [DN42-LG-Bot by charlie-moomoo](https://github.com/charlie-moomoo/DN42-LG-Bot) - Provide basic calling template.
+- [`DN42-LG-Bot by charlie-moomoo`](https://github.com/charlie-moomoo/DN42-LG-Bot) - Provide basic calling template.
 - [`node-fetch-cjs`](https://www.npmjs.com/package/node-fetch-cjs) - Fetch API for CommonJS environments
 - [`js-yaml`](https://www.npmjs.com/package/js-yaml) - YAML configuration file parser
 - [`node-telegram-bot-api`](https://www.npmjs.com/package/node-telegram-bot-api) - Telegram Bot SDK
