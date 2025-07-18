@@ -1,0 +1,15 @@
+token: "token"  # Telegram Bot Token
+
+botusername: "your-bot-username"  # 你的 bot 用户名，不带 @
+
+default: "default"  # 默认服务器 id
+
+servers:
+  default:
+    id: "default"
+    name: "Your Main Backend"
+  node1:
+    id: "node1"
+    name: "Your Second Backend"
+    url: "http://httpurl:port/api/run"
+    secret: "password-not-required"
