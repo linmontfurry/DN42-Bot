@@ -26,6 +26,8 @@
 | `/nslookup example.com` | Nslookup DNS 查询 |
 | `/dig example.com` | Dig DNS 查询 |
 | `/flap` | 实时 Flap 监控 (1.0.7-dev1) |
+| `/activeflaps` | 实时活跃的flap preflix查询 (1.0.7-dev3) |
+| `/historyflaps` | 实时活跃的preflix历史challenge查询 (1.0.7-dev3) |
 
 ## 配置说明
 
@@ -80,6 +82,7 @@ Bot 的部署阶段必须要与 `commands.js` 一起部署（默认后端参数�
 - [`node-telegram-bot-api`](https://www.npmjs.com/package/node-telegram-bot-api) - Telegram Bot SDK
 - [`chalk`](https://www.npmjs.com/package/chalk) - Colorful terminal output
 - [`whois`](https://www.npmjs.com/package/whois) - WHOIS client
-- [`Lan Tian Whois`](whois.lantian.dn42) - Dn42 Version Of WHOIS Query Provider
+- [`Burble DN42 Whois`](https://dn42.eu/services/Whois) - Dn42 Version Of WHOIS Query Provider
+- [`Kioubit/FlapAlerted`](https://github.com/Kioubit/FlapAlerted/) - All information of flapping command is provided by backend
 
 感谢这些项目/依赖/api提供的数据处理与代码结构构建灵感。
