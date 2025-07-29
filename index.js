@@ -26,7 +26,7 @@ function loadConfig(file = './config.yaml') {
     const text = fs.readFileSync(configPath, 'utf8');
     return yaml.load(text);
   } catch (err) {
-    console.error('Failed to load config.yaml:', err.message);
+    logAction('Status', {extra: `Failed to load config.yaml ${err.message}`});
     process.exit(1);
   }
 }
@@ -114,9 +114,9 @@ bot.setMyCommands([
   { command: 'historyflaps', description: 'Get flapping update history' },
   { command: 'flap', description: 'Get AS Average Route Changes' }
 ], { scope: { type: 'default' } }).then(() => {
-  console.log("✅ Commands registered with Telegram.");
+  logAction('Status', {extra: `✅ Commands registered with Telegram.`});
 }).catch(err => {
-  console.error("❌ Failed to register commands:", err.message);
+  logAction('Status', {extra: `❌ Failed to register commands:${err.message}`})
 });
 
 const groupCommandSupport = new Map();
