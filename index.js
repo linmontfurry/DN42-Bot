@@ -505,14 +505,16 @@ bot.onText(new RegExp(`^\\/flap${suffixPattern}$`), async (msg) => {
     const {
       ActiveFlapCount,
       ActiveFlapTotalPathChangeCount,
-      AverageRouteChanges90
+      AverageRouteChanges90,
+      Sessions
     } = flapRes;
 
     const message = `*FlapAlerted Live Data*\n\n` +
       `${flapCfg.name} (${version})\n` +
       `Active Flap Count: ${ActiveFlapCount}\n` +
       `Active Flap Total Path Change Count: ${ActiveFlapTotalPathChangeCount}\n` +
-      `Average Route Changes: ${AverageRouteChanges90}`;
+      `Average Route Changes: ${AverageRouteChanges90}\n` +
+      `Connected BGP Feeds: ${Sessions}`;
 
     bot.sendMessage(chatId, message, {
       parse_mode: 'Markdown',
